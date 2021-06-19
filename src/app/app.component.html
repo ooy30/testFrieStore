@@ -1,11 +1,6 @@
 <div style="display: flex;">
 
-    <mat-label>name</mat-label>
-    <input matInput placeholder="name" [(ngModel)]="name">
-
-
-
-  <mat-label>age</mat-label>
+  <input matInput placeholder="name" [(ngModel)]="name">
   <input matInput placeholder="age" [(ngModel)]="age">
 
 <button mat-button color="accent" style="margin: 10px;" (click)="addData()">Accent</button>
@@ -13,7 +8,7 @@
 </div>
 
 <div>
-  <table mat-table [dataSource]="listData" class="mat-elevation-z8" style="width: 100%;">
+  <table mat-table [dataSource]="listData" class="mat-elevation-z8 table-test" style="width: 100%;" >
 
   <ng-container matColumnDef="name" style="width: 200px;">
     <th mat-header-cell *matHeaderCellDef> name </th>
