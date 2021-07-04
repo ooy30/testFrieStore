@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule,CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,11 +12,16 @@ import { TestComponent } from './pages/test/test.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatTableModule } from '@angular/material/table';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { FormsModule } from '@angular/forms'
+import { FormsModule } from '@angular/forms';
+import { LeftMenuComponent } from './pages/left-menu/left-menu.component';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatIconModule} from '@angular/material/icon';
+import { NgxLoadingModule } from 'ngx-loading';
 @NgModule({
   declarations: [
     AppComponent,
-    TestComponent
+    TestComponent,
+    LeftMenuComponent
   ],
   imports: [
     BrowserModule,
@@ -36,11 +41,19 @@ import { FormsModule } from '@angular/forms'
     BrowserAnimationsModule,
     MatTableModule,
     MatFormFieldModule,
-    FormsModule
+    FormsModule,
+    MatSidenavModule,
+    MatIconModule,
+    NgxLoadingModule
 
 
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
+  bootstrap: [AppComponent],
+  
 })
-export class AppModule { }
+export class AppModule {}
+  
+ 
+
